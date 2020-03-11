@@ -6,7 +6,7 @@ Repo for training a binary classifier to predict cardiac surgery mortality using
 
 1. [feature selection](feature_selection.ipynb)
 2. [euroscore](euroscore.ipynb)
-3. [evaluaion](evaluation.ipynb)
+3. [evaluation](evaluation.ipynb)
 
 ## Downstream analysis
 
