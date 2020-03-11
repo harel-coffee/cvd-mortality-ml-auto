@@ -4,9 +4,9 @@ Repo for training a binary classifier to predict cardiac surgery mortality using
 
 ## Notebooks
 
-1. [feature selection](https://scmv-ieugit.epi.bris.ac.uk/ml18692/cvd-mortality-ml/blob/master/feature_selection.ipynb)
-2. [euroscore](https://scmv-ieugit.epi.bris.ac.uk/ml18692/cvd-mortality-ml/blob/master/euroscore.ipynb)
-3. [evaluaion](https://scmv-ieugit.epi.bris.ac.uk/ml18692/cvd-mortality-ml/blob/master/evaluation.ipynb)
+1. [feature selection](feature_selection.ipynb)
+2. [euroscore](euroscore.ipynb)
+3. [evaluaion](evaluation.ipynb)
 
 ## Downstream analysis
 
