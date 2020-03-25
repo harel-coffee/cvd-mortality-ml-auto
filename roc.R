@@ -2,9 +2,6 @@ library('pROC')
 library('data.table')
 library('ggplot2')
 
-# increase font sizes
-theme_update(text = element_text(size=22))
-
 # read in test data
 test <- fread("./probs.19.02.20.csv")
 test$STATUS_DISCHARGE<-as.numeric(test$STATUS_DISCHARGE)
@@ -25,9 +22,10 @@ l[[paste0("RandomForest\nAUC ", round(rf_roc$ci[2],2), "\n(95CI ", round(rf_roc$
 l[[paste0("NaiveBayes\nAUC ", round(nb_roc$ci[2],2), "\n(95CI ", round(nb_roc$ci[1], 2), ", ", round(nb_roc$ci[3], 2), ")")]] <- nb_roc
 l[[paste0("NeuralNetwork\nAUC ", round(nn_roc$ci[2],2), "\n(95CI ", round(nn_roc$ci[1], 2), ", ", round(nn_roc$ci[3], 2), ")")]] <- nn_roc
 
-p <- ggroc(l, size = 1.5) + 
-    theme(legend.position='bottom') + 
-    theme(legend.title = element_blank()) + 
-    ggtitle("ROC curve (testidation data)") +
+# plot ROC
+p <- ggroc(l) + 
+    theme_light() +
+    theme(legend.title=element_blank(), text = element_text(size=12), legend.key.height=unit(3,"line")) +
+    ggtitle("Holdout validation ROC curve") +
     geom_segment(aes(x = 1, xend = 0, y = 0, yend = 1), color="darkgrey", linetype="dashed")
-ggsave('roc.test.jpg', p, width=11)
+ggsave('roc.png', p, height=4, width=5)
