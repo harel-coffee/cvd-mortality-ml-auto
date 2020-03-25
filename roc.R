@@ -1,6 +1,7 @@
 library('pROC')
 library('data.table')
 library('ggplot2')
+setEPS()
 
 # read in test data
 test <- fread("./probs.19.02.20.csv")
@@ -28,4 +29,4 @@ p <- ggroc(l) +
     theme(legend.title=element_blank(), text = element_text(size=12), legend.key.height=unit(3,"line")) +
     ggtitle("Holdout validation ROC curve") +
     geom_segment(aes(x = 1, xend = 0, y = 0, yend = 1), color="darkgrey", linetype="dashed")
-ggsave('roc.png', p, height=4, width=5)
+ggsave('roc.eps', p, height=4, width=5)
