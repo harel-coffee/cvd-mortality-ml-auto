@@ -4,9 +4,7 @@ Repo for training a binary classifier to predict cardiac surgery mortality using
 
 ## Citation
 
-```txt
 Benedetto, U., Sinha, S., Lyon, M., Dimagli, A., Gaunt, T. R., Angelini, G., & Sterne, J. (2020). Can machine learning improve mortality prediction following cardiac surgery? European Journal of Cardio-Thoracic Surgery. https://doi.org/10.1093/ejcts/ezaa229
-```
 
 ## Notebooks
 
